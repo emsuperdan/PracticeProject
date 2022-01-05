@@ -1,0 +1,20 @@
+package com.example.annotation.annotation;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+/**
+ *
+ * @author dan.tang
+ */
+
+@Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD})
+@Retention(RetentionPolicy.CLASS)
+public @interface TestClassAnnotation {
+
+    String path();
+
+    String group() default "";
+}
